@@ -1,0 +1,136 @@
+id: summarizeChanges
+type: datasource
+subtype: RetoolAIQuery
+resourceName: retool_ai
+resourceDisplayName: retool_ai
+template:
+  ordered:
+    - vectorNamespaceIds: []
+    - vectorDynamicUrls: ''
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - vectorActionNamespaceDynamicModeEnabled: false
+    - vectorCreateAndFetchDynamicModeEnabled: false
+    - streamResponse: true
+    - imageClassifierDynamicLabels: ''
+    - lastReceivedFromResourceAt: null
+    - vectorSemanticSearchString: ''
+    - queryDisabledMessage: ''
+    - customTemperature: '1'
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - vectorUrls: []
+    - customSystemMessage: ''
+    - textExtractorDynamicLabels: ''
+    - imageExtractorLabels: []
+    - query: ''
+    - playgroundQueryUuid: ''
+    - imageExtractorDynamicModeEnabled: false
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - model: o1
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - defaultModelInitialized: true
+    - providerId: retoolAIBuiltIn::openAI
+    - textClassifierLabels: []
+    - textClassifierDynamicModeEnabled: false
+    - importedQueryInputs:
+        ordered: []
+    - instruction: >-
+        {{ fetchAdded.data }} contains a list of features that Retool added this
+        week. Write me a summary of the added features. Link to the latest edge
+        release notes at https://docs.retool.com/releases/edge for more
+        information.
+    - isImported: false
+    - imageModel: dall-e-3
+    - showSuccessToaster: true
+    - fileUseDynamicSource: false
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata:
+        ordered: []
+    - textClassifierDynamicLabels: ''
+    - queryRunTime: null
+    - changesetObject: ''
+    - offlineOptimisticResponse: null
+    - errorTransformer: return data.error
+    - finished: null
+    - embeddingModel: text-embedding-ada-002
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - chatInput: ''
+    - rawData: null
+    - vectorNamespaceId: ''
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - vectorDynamicNamespaces: ''
+    - enableErrorTransformer: false
+    - isHidden: false
+    - imageExtractorDynamicLabels: ''
+    - multimodalModel: gpt-4o
+    - showLatestVersionUpdatedWarning: false
+    - vectorActionDynamicNamespace: ''
+    - timestamp: 0
+    - evalType: script
+    - textExtractorDynamicModeEnabled: false
+    - action: textGeneration
+    - textExtractorLabels: []
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - fileSource: ''
+    - filterLabels: []
+    - systemMessage: You are a helpful assistant
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - content: ''
+    - transformer: return data
+    - events: []
+    - vectorAction: upsertDocument
+    - queryTimeout: '120000'
+    - workflowId: null
+    - vectorNamespacesDynamicModeEnabled: false
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - source: ''
+    - imageClassifierLabels: []
+    - imageClassifierDynamicModeEnabled: false
+    - changesetIsObject: false
+    - vectorModeEnabled: false
+    - vectorNamespaceIdsFilters: []
+    - providerName: openAI
+    - enableCaching: false
+    - allowedGroups: []
+    - chatHistory: ''
+    - imageContent: ''
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2025-01-28T19:54:44.593Z
+blockData:
+  top: 48
+  left: 2112
+  uuid: a8f36523-955e-4f9a-86cf-014c7dec9c54
+  pluginId: summarizeChanges
+  blockType: default
+  editorType: RetoolAIQuery
+  resourceName: retool_ai
+  incomingPorts:
+    - portId: f7b063bd-fcd4-43eb-80a6-4fb29bfcdd6b
+      blockId: 158c041b-933c-4938-9e4e-89f04aa739f6
+  incomingOnSuccessEdges: []
