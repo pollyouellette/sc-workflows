@@ -1,0 +1,114 @@
+<GlobalFunctions>
+  <RESTQuery
+    id="getUsers"
+    resourceDisplayName="Users"
+    resourceName="4ccf37b5-9661-469f-a13c-79980ce9044b"
+    workflowActionType={null}
+    workflowBlockUuid={null}
+    workflowRunId={null}
+  />
+  <RESTQuery
+    id="patchUser"
+    body={
+      '[{"key":"name","value":"{{table1.changesetArray[\'0\'].name}}"},{"key":"email","value":"{{table1.changesetArray[\'0\'].email}}"},{"key":"","value":""}]'
+    }
+    bodyType="json"
+    query="{{table1.changesetArray['0'].id}}"
+    resourceDisplayName="Users"
+    resourceName="4ccf37b5-9661-469f-a13c-79980ce9044b"
+    runWhenModelUpdates={false}
+    type="PATCH"
+    workflowActionType={null}
+    workflowBlockUuid={null}
+    workflowRunId={null}
+  />
+  <RESTQuery
+    id="blockUser"
+    body={'[{"key":"blocked","value":"true"}]'}
+    bodyType="json"
+    query="{{ table1.selectedRow.id }}"
+    resourceDisplayName="Users"
+    resourceName="4ccf37b5-9661-469f-a13c-79980ce9044b"
+    runWhenModelUpdates={false}
+    type="PATCH"
+    workflowActionType={null}
+    workflowBlockUuid={null}
+    workflowRunId={null}
+  >
+    <Event
+      event="success"
+      method="trigger"
+      params={{ ordered: [] }}
+      pluginId="getUsers"
+      type="datasource"
+      waitMs="0"
+      waitType="debounce"
+    />
+  </RESTQuery>
+  <RESTQuery
+    id="unblockUser"
+    body={'[{"key":"blocked","value":"false"}]'}
+    bodyType="json"
+    query="{{ table1.selectedRow.id }}"
+    resourceDisplayName="Users"
+    resourceName="4ccf37b5-9661-469f-a13c-79980ce9044b"
+    runWhenModelUpdates={false}
+    type="PATCH"
+    workflowActionType={null}
+    workflowBlockUuid={null}
+    workflowRunId={null}
+  >
+    <Event
+      event="success"
+      method="trigger"
+      params={{ ordered: [] }}
+      pluginId="getUsers"
+      type="datasource"
+      waitMs="0"
+      waitType="debounce"
+    />
+  </RESTQuery>
+  <Function
+    id="userFirstName"
+    funcBody={include("./lib/userFirstName.js", "string")}
+  />
+  <JavascriptQuery
+    id="blockAll"
+    notificationDuration={4.5}
+    query={include("./lib/blockAll.js", "string")}
+    resourceName="JavascriptQuery"
+    showSuccessToaster={false}
+    workflowActionType={null}
+    workflowBlockUuid={null}
+    workflowRunId={null}
+  />
+  <RESTQuery
+    id="blockAllUsers"
+    body={'[{"key":"blocked","value":"true"}]'}
+    bodyType="json"
+    isMultiplayerEdited={false}
+    query="{{ table1.data[i].id }}"
+    resourceDisplayName="Users"
+    resourceName="4ccf37b5-9661-469f-a13c-79980ce9044b"
+    runWhenModelUpdates={false}
+    showSuccessToaster={false}
+    type="PATCH"
+    workflowActionType={null}
+    workflowBlockUuid={null}
+    workflowRunId={null}
+  />
+  <JavascriptQuery
+    id="setDark"
+    notificationDuration={4.5}
+    query={include("./lib/setDark.js", "string")}
+    resourceName="JavascriptQuery"
+    showSuccessToaster={false}
+  />
+  <JavascriptQuery
+    id="setLight"
+    notificationDuration={4.5}
+    query={include("./lib/setLight.js", "string")}
+    resourceName="JavascriptQuery"
+    showSuccessToaster={false}
+  />
+</GlobalFunctions>
