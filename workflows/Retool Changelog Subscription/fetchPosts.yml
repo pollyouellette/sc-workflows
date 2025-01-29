@@ -23,7 +23,7 @@ template:
     - headers: ''
     - showFailureToaster: true
     - paginationEnabled: false
-    - query: https://docs.retool.com/data/releases/edge.json
+    - query: https://docs.retool.com/data/releases/stable.json
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
