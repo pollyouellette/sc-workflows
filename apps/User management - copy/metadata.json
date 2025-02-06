@@ -1,0 +1,42 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "c422de62-e4bb-11ef-aaee-7bd78473d10d",
+  "appTemplate": {
+    "appThemeId": 118575,
+    "pageCodeFolders": {
+      "object": {
+        "getUsers": {
+          "array": []
+        },
+        "patchUser": {
+          "array": []
+        },
+        "userFirstName": {
+          "array": []
+        },
+        "blockUser": {
+          "array": []
+        },
+        "unblockUser": {
+          "array": []
+        },
+        "blockAll": {
+          "array": []
+        },
+        "blockAllUsers": {
+          "array": []
+        },
+        "unblockAllUsers": {
+          "array": []
+        },
+        "unblockAll": {
+          "array": []
+        }
+      }
+    },
+    "appThemeName": "Custom Theme",
+    "version": "3.150.0",
+    "experimentalDataTabEnabled": true
+  }
+}

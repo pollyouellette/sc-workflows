@@ -1,0 +1,1 @@
+return {{ table1.selectedRow.name.split(' ')[0] }}
