@@ -101,6 +101,7 @@
       emptyMessage="No rows found"
       enableSaveActions={true}
       primaryKeyColumnId="c3e73"
+      rowHeight="small"
       showBorder={true}
       showFooter={true}
       showHeader={true}
@@ -225,12 +226,6 @@
         </View>
       </Container>
     </ListViewBeta>
-    <TextInput
-      id="textInput1"
-      label="New User"
-      labelPosition="top"
-      placeholder="Enter value"
-    />
     <Statistic
       id="statistic1"
       currency="USD"
@@ -247,6 +242,12 @@
       secondaryValue={0.08}
       showSeparators={true}
       value={7552.8}
+    />
+    <TextInput
+      id="textInput1"
+      label="New User"
+      labelPosition="top"
+      placeholder="Enter value"
     />
     <TagsWidget2 id="tags1" allowWrap={true} data={'["Foo", "Bar", "Baz"]'} />
   </Frame>
