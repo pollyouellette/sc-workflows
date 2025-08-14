@@ -9,11 +9,7 @@
     sticky={null}
     type="main"
   >
-    <Text
-      id="text1"
-      value="## {{ retoolContext.appName }}"
-      verticalAlign="center"
-    />
+    <Text id="text1" value="## Manage blocked users" verticalAlign="center" />
     <Table
       id="table1"
       cellSelection="none"
