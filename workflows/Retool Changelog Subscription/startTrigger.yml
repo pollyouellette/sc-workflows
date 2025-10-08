@@ -3,74 +3,8 @@ type: datasource
 subtype: JavascriptQuery
 resourceName: JavascriptQuery
 template:
-  ordered:
-    - queryRefreshTime: ''
-    - allowedGroupIds: []
-    - streamResponse: false
-    - lastReceivedFromResourceAt: null
-    - queryDisabledMessage: ''
-    - servedFromCache: false
-    - offlineUserQueryInputs: ''
-    - successMessage: ''
-    - queryDisabled: ''
-    - playgroundQuerySaveId: latest
-    - workflowParams: null
-    - resourceNameOverride: ''
-    - runWhenModelUpdates: false
-    - showFailureToaster: true
-    - query: return null
-    - playgroundQueryUuid: ''
-    - playgroundQueryId: null
-    - error: null
-    - workflowRunBodyType: raw
-    - privateParams: []
-    - queryRunOnSelectorUpdate: false
-    - runWhenPageLoadsDelay: ''
-    - data: null
-    - importedQueryInputs:
-        ordered: []
-    - _additionalScope: []
-    - isImported: false
-    - showSuccessToaster: true
-    - cacheKeyTtl: ''
-    - requestSentTimestamp: null
-    - metadata: null
-    - queryRunTime: null
-    - changesetObject: ''
-    - offlineOptimisticResponse: null
-    - errorTransformer: return data.error
-    - finished: null
-    - confirmationMessage: null
-    - isFetching: false
-    - changeset: ''
-    - rawData: null
-    - queryTriggerDelay: '0'
-    - resourceTypeOverride: null
-    - watchedParams: []
-    - enableErrorTransformer: false
-    - isHidden: false
-    - showLatestVersionUpdatedWarning: false
-    - timestamp: 0
-    - evalType: script
-    - importedQueryDefaults:
-        ordered: []
-    - enableTransformer: false
-    - showUpdateSetValueDynamicallyToggle: true
-    - overrideOrgCacheForUserCache: false
-    - runWhenPageLoads: false
-    - transformer: return data
-    - events: []
-    - queryTimeout: '10000'
-    - workflowId: null
-    - requireConfirmation: false
-    - queryFailureConditions: ''
-    - changesetIsObject: false
-    - enableCaching: false
-    - allowedGroups: []
-    - offlineQueryType: None
-    - queryThrottleTime: '750'
-    - updateSetValueDynamically: false
-    - notificationDuration: ''
+  map:
+    query: 'return '
 createdAt: 2025-01-28T18:41:01.180Z
 blockData:
   top: 48

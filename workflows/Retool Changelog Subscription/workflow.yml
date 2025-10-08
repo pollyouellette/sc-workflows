@@ -108,6 +108,7 @@ setupScripts:
 
           /* Add destructured imports from library below
           eg. const { pow, log } = require("mathjs") */
+hasProtectedTriggers: false
 triggerWebhooks:
   array:
     - object:
@@ -123,4 +124,5 @@ version: 43.0.9
 workflowId: 3502acae-4b2c-4315-8aa1-3692f32fa9e8
 description: null
 workflowTemplate:
-  version: 3.145.0
+  appMaxWidth: 100%
+  version: 3.284.0
