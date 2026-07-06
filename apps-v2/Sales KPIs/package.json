@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "retool": {
+    "app": {
+      "uuid": "cf202882-7953-11f1-97a8-7fa5941b4cda",
+      "name": "Sales KPIs",
+      "resourceReferencesByFile": {},
+      "appIdentifier": "sales-kpis"
+    }
+  }
+}
