@@ -30,15 +30,18 @@ type KpiCardProps = {
   title: string
   value: string
   icon: React.ReactNode
+  iconClass: string
   trend?: { positive: boolean; label: string }
 }
 
-function KpiCard({ title, value, icon, trend }: KpiCardProps) {
+function KpiCard({ title, value, icon, iconClass, trend }: KpiCardProps) {
   return (
     <Card className="shadow-retool-sm">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-sm font-medium text-muted-foreground">{title}</CardTitle>
-        <span className="text-muted-foreground">{icon}</span>
+        <span className={`flex h-8 w-8 items-center justify-center rounded-md ${iconClass}`}>
+          {icon}
+        </span>
       </CardHeader>
       <CardContent>
         <div className="text-2xl font-bold">{value}</div>
@@ -83,11 +86,13 @@ export default function Dashboard() {
           title="Current MRR"
           value={formatCurrency(kpis.currentMrr)}
           icon={<DollarSign className="h-4 w-4" />}
+          iconClass="bg-emerald-100 text-emerald-600 dark:bg-emerald-950 dark:text-emerald-400"
         />
         <KpiCard
           title="MoM MRR Growth"
           value={`${kpis.momGrowthPct >= 0 ? '+' : ''}${kpis.momGrowthPct.toFixed(1)}%`}
           icon={<TrendingUp className="h-4 w-4" />}
+          iconClass="bg-blue-100 text-blue-600 dark:bg-blue-950 dark:text-blue-400"
           trend={{
             positive: kpis.momGrowthPct >= 0,
             label: 'vs. previous month',
@@ -97,11 +102,13 @@ export default function Dashboard() {
           title="Gross Churn"
           value={`${kpis.grossChurnPct.toFixed(1)}%`}
           icon={<Percent className="h-4 w-4" />}
+          iconClass="bg-amber-100 text-amber-600 dark:bg-amber-950 dark:text-amber-400"
         />
         <KpiCard
           title="Net Churn"
           value={`${kpis.netChurnPct.toFixed(1)}%`}
           icon={<Users className="h-4 w-4" />}
+          iconClass="bg-violet-100 text-violet-600 dark:bg-violet-950 dark:text-violet-400"
         />
       </div>
 
@@ -120,14 +127,21 @@ export default function Dashboard() {
                   stroke="hsl(var(--muted-foreground))"
                   tickFormatter={(v: number) => `$${Math.round(v / 1000)}k`}
                 />
+                <defs>
+                  <linearGradient id="mrrFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#6366f1" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
                 <Tooltip formatter={(v) => formatCurrency(Number(v))} />
                 <Line
                   type="monotone"
                   dataKey="mrr"
                   name="MRR"
-                  stroke="hsl(var(--chart-1))"
-                  strokeWidth={2}
-                  dot={false}
+                  stroke="#6366f1"
+                  strokeWidth={2.5}
+                  dot={{ r: 3, fill: '#6366f1' }}
+                  activeDot={{ r: 5 }}
                 />
               </LineChart>
             </ResponsiveContainer>
@@ -154,17 +168,19 @@ export default function Dashboard() {
                   type="monotone"
                   dataKey="gross_churn_pct"
                   name="Gross Churn"
-                  stroke="hsl(var(--chart-1))"
-                  strokeWidth={2}
-                  dot={false}
+                  stroke="#f59e0b"
+                  strokeWidth={2.5}
+                  dot={{ r: 3, fill: '#f59e0b' }}
+                  activeDot={{ r: 5 }}
                 />
                 <Line
                   type="monotone"
                   dataKey="net_churn_pct"
                   name="Net Churn"
-                  stroke="hsl(var(--chart-3))"
-                  strokeWidth={2}
-                  dot={false}
+                  stroke="#10b981"
+                  strokeWidth={2.5}
+                  dot={{ r: 3, fill: '#10b981' }}
+                  activeDot={{ r: 5 }}
                 />
               </LineChart>
             </ResponsiveContainer>
