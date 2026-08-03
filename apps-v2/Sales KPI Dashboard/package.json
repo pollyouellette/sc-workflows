@@ -4,6 +4,7 @@
     "app": {
       "uuid": "22931040-8b85-11f1-a3a5-ef5ceddede7a",
       "name": "Sales KPI Dashboard",
+      "resourceReferencesByFile": {},
       "appIdentifier": "kpi-dash"
     }
   }
